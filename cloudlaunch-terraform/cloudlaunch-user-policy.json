@@ -1,0 +1,57 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "SeeBucketsInConsole",
+      "Effect": "Allow",
+      "Action": ["s3:ListAllMyBuckets"],
+      "Resource": "*"
+    },
+    {
+      "Sid": "BucketLevelListAndLocationForSiteAndPrivate",
+      "Effect": "Allow",
+      "Action": ["s3:ListBucket", "s3:GetBucketLocation"],
+      "Resource": [
+        "arn:aws:s3:::cloudlaunch-site-bucket-adadev-014",
+        "arn:aws:s3:::cloudlaunch-private-bucket-adadev-014"
+      ]
+    },
+    {
+      "Sid": "JustSeeVisibleOnlyBucket",
+      "Effect": "Allow",
+      "Action": ["s3:GetBucketLocation"],
+      "Resource": "arn:aws:s3:::cloudlaunch-visible-only-bucket-adadev-014"
+    },
+    {
+      "Sid": "ReadSiteContent",
+      "Effect": "Allow",
+      "Action": ["s3:GetObject"],
+      "Resource": "arn:aws:s3:::cloudlaunch-site-bucket-adadev-014/*"
+    },
+    {
+      "Sid": "ReadWritePrivateNoDelete",
+      "Effect": "Allow",
+      "Action": ["s3:GetObject", "s3:PutObject"],
+      "Resource": "arn:aws:s3:::cloudlaunch-private-bucket-adadev-014/*"
+    },
+    {
+      "Sid": "ExplicitlyDenyDeleteEverywhere",
+      "Effect": "Deny",
+      "Action": ["s3:DeleteObject", "s3:DeleteObjectVersion"],
+      "Resource": [
+        "arn:aws:s3:::cloudlaunch-site-bucket-adadev-014/*",
+        "arn:aws:s3:::cloudlaunch-private-bucket-adadev-014/*",
+        "arn:aws:s3:::cloudlaunch-visible-only-bucket-adadev-014/*"
+      ]
+    },
+    {
+      "Sid": "DenyAccessToVisibleOnlyContent",
+      "Effect": "Deny",
+      "Action": ["s3:GetObject", "s3:PutObject", "s3:ListBucket"],
+      "Resource": [
+        "arn:aws:s3:::cloudlaunch-visible-only-bucket-adadev-014",
+        "arn:aws:s3:::cloudlaunch-visible-only-bucket-adadev-014/*"
+      ]
+    }
+  ]
+}
