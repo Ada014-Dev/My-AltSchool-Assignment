@@ -75,13 +75,6 @@ IAM Permissions for VPC
   - VPCs, Subnets, Route Tables, Internet Gateways, and Security Groups.  
 
 ---
-WS Account Details
-
-- Account ID: 903479130163
-- IAM Console Login URL:(https://903479130163.signin.aws.amazon.com/console)
-- IAM User: `cloudlaunch-user`
-- Credentials: (username cloudlaunch-user password: adadev_0144, with password reset required)
- IAM Policy JSON
 
 ```json
 {
