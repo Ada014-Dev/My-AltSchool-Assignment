@@ -33,10 +33,8 @@ IAM User: `cloudlaunch-user`
   - No access to objects in `cloudlaunch-visible-only-bucket`.  
   - No `DeleteObject` permission anywhere.  
 
- Static Site Link
-[S3 Website URL goes here]  
-(Optional) [CloudFront URL goes here]  
-
+**S3 Static Website**: [Static Website Url](http://cloudlaunch-site-bucket-adadev-014.s3-website-us-east-1.amazonaws.com)
+- **CloudFront URL**: [CloudFront url](https://dziwgqnymnmqb.cloudfront.net/?utm_campaign=as-npt105112517)
 
  Task 2: VPC Design
 
