@@ -33,10 +33,8 @@ IAM User: `cloudlaunch-user`
   - No access to objects in `cloudlaunch-visible-only-bucket`.  
   - No `DeleteObject` permission anywhere.  
 
- Static Site Link
-[S3 Website URL goes here]  
-(Optional) [CloudFront URL goes here]  
-
+**S3 Static Website**: [Static Website Url](http://cloudlaunch-site-bucket-adadev-014.s3-website-us-east-1.amazonaws.com)
+- **CloudFront URL**: [CloudFront url](https://dziwgqnymnmqb.cloudfront.net/?utm_campaign=as-npt105112517)
 
  Task 2: VPC Design
 
@@ -77,13 +75,6 @@ IAM Permissions for VPC
   - VPCs, Subnets, Route Tables, Internet Gateways, and Security Groups.  
 
 ---
-WS Account Details
-
-- Account ID: 903479130163
-- IAM Console Login URL:(https://903479130163.signin.aws.amazon.com/console)
-- IAM User: `cloudlaunch-user`
-- Credentials: (username cloudlaunch-user password: adadev_0144, with password reset required)
- IAM Policy JSON
 
 ```json
 {
